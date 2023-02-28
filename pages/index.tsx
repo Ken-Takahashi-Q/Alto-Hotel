@@ -1,14 +1,18 @@
 import Head from 'next/head'
-import { useState } from 'react';
+import React, { useState, useContext  } from 'react';
 import styles from '@/styles/Home.module.css'
 import ImageGallery from './gallery';
 
 export default function Home() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [chatOpen, setChatOpen] = useState(false);
 
 	const handleMenuClick = () => {
 	  setIsOpen(!isOpen);
 	};
+	const handleChatClick = () => {
+		setChatOpen(!chatOpen);
+	  };
 
   	return (
 	<div>
@@ -172,9 +176,17 @@ export default function Home() {
 			</div>
 
 			{/* Chat */}
-			<button className="fixed h-12 w-12 bg-[#326BFF] cursor-pointer rounded-[5rem] border-[none] right-0 bottom-8">
+			<button className="fixed h-12 w-12 bg-[#326BFF] cursor-pointer rounded-[5rem] border-[none] right-0 bottom-8"
+					onClick={handleChatClick}>
 				<img className="mx-auto" src="Icon-LiveChat.png" alt="Live Chat" />
 			</button>
+
+			<div className={`${chatOpen ? 'absolute bottom-0 left-0 h-[100px] w-full transition-transform duration-[0.3s] ease-[ease-out]' :
+									'hidden'}`}>
+				<div className='justify-center h-12 w-12 bg-[#326BFF] rounded-[50%] border-[none]'>
+					
+				</div>
+			</div>
 
 			
 		</div>
