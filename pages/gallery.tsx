@@ -23,7 +23,7 @@ export default function ImageGallery() {
   };
 
   return (
-    <div className="w-full absolute h-[276px] top-[78px]">
+    <div className="absolute w-full h-[276px] top-[110px]">
       <div className="absolute w-[352px] h-[200px] bg-[#D9D9D9] rounded-lg -translate-x-2/4 left-2/4 top-[64px]">
         {images.map((imageUrl, index) => (
           <img
@@ -40,7 +40,7 @@ export default function ImageGallery() {
         ))}
       </div>
       
-      <div className="flex flex-row items-start gap-2 absolute w-14 h-2 left-[calc(50%_-_56px/2)] p-0 top-[330px] z-[1000]">
+      <div className='absolute top-[290px] -translate-x-2/4 left-2/4'>
         {images.map((_, index) => (
           <span
             key={index}

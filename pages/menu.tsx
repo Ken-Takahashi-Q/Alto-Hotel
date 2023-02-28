@@ -10,7 +10,7 @@ export default function HamburgerMenu() {
 
     return (
         <div className="hamburger_menu">
-            <div className='flex flex-col items-center text-center bg-blue-600'>
+            <div className='flex flex-col items-center text-center bg-[#326BFF]'>
                 <div className='rounded-lg p-4'>
                     <img className='w-24' src="group.png" alt="logo" />
                 </div>
